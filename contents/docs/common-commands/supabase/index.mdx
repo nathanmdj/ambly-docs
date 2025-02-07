@@ -1,0 +1,156 @@
+---
+title: Supabase Commands
+description: A collection of commands for Supabase.
+---
+
+import Tabs from "./Tabs";
+
+### Supabase Login
+
+<Tabs defaultValue="pnpm" className="pt-5 pb-1">
+  <TabsList>
+    <TabsTrigger value="pnpm">pnpm</TabsTrigger>
+    <TabsTrigger value="npm">npm</TabsTrigger>
+    <TabsTrigger value="yarn">yarn</TabsTrigger>
+  </TabsList>
+  <TabsContent value="pnpm">
+  ```bash 
+  pnpm dlx supabase login 
+  ```
+  </TabsContent>
+  <TabsContent value="npm">
+  ```bash 
+  npx supabase login 
+  ```
+  </TabsContent>
+  <TabsContent value="yarn">
+  ```bash 
+  yarn dlx supabase login 
+  ```
+  </TabsContent>
+</Tabs>
+
+### Supabase Init
+
+<Tabs defaultValue="pnpm" className="pt-5 pb-1">
+  <TabsList>
+    <TabsTrigger value="pnpm">pnpm</TabsTrigger>
+    <TabsTrigger value="npm">npm</TabsTrigger>
+    <TabsTrigger value="yarn">yarn</TabsTrigger>
+  </TabsList>
+  <TabsContent value="pnpm">
+  ```bash 
+  pnpm dlx supabase init 
+  ```
+  </TabsContent>
+  <TabsContent value="npm">
+  ```bash 
+  npx supabase init 
+  ```
+  </TabsContent>
+  <TabsContent value="yarn">
+  ```bash 
+  yarn dlx supabase init 
+  ```
+  </TabsContent>
+</Tabs>
+
+### Supabase Start
+
+<Tabs defaultValue="pnpm" className="pt-5 pb-1">
+  <TabsList>
+    <TabsTrigger value="pnpm">pnpm</TabsTrigger>
+    <TabsTrigger value="npm">npm</TabsTrigger>
+    <TabsTrigger value="yarn">yarn</TabsTrigger>
+  </TabsList>
+  <TabsContent value="pnpm">
+  ```bash 
+  pnpm dlx supabase start 
+  ```
+  </TabsContent>
+  <TabsContent value="npm">
+  ```bash 
+  npx supabase start 
+  ```
+  </TabsContent>
+  <TabsContent value="yarn">
+  ```bash 
+  yarn dlx supabase start 
+  ```
+  </TabsContent>
+</Tabs>
+
+### Supabase Stop
+
+<Tabs defaultValue="pnpm" className="pt-5 pb-1">
+  <TabsList>
+    <TabsTrigger value="pnpm">pnpm</TabsTrigger>
+    <TabsTrigger value="npm">npm</TabsTrigger>
+    <TabsTrigger value="yarn">yarn</TabsTrigger>
+  </TabsList>
+  <TabsContent value="pnpm">
+  ```bash 
+  pnpm dlx supabase stop 
+  ```
+  </TabsContent>
+  <TabsContent value="npm">
+  ```bash 
+  npx supabase stop 
+  ```
+  </TabsContent>
+  <TabsContent value="yarn">
+  ```bash 
+  yarn dlx supabase stop 
+  ```
+  </TabsContent>
+</Tabs>
+
+### Supabase Edge Functions
+
+<Tabs defaultValue="pnpm" className="pt-5 pb-1">
+  <TabsList>
+    <TabsTrigger value="pnpm">pnpm</TabsTrigger>
+    <TabsTrigger value="npm">npm</TabsTrigger>
+    <TabsTrigger value="yarn">yarn</TabsTrigger>
+  </TabsList>
+  <TabsContent value="pnpm">
+  ```bash 
+  pnpm dlx supabase functions deploy --no-verify-jwt
+  ```
+  </TabsContent>
+  <TabsContent value="npm">
+  ```bash 
+  npx supabase functions deploy --no-verify-jwt
+  ```
+  </TabsContent>
+  <TabsContent value="yarn">
+  ```bash 
+  yarn dlx supabase functions deploy --no-verify-jwt
+  ```
+  </TabsContent>
+</Tabs>
+
+### Supabase Typegen
+
+<Tabs defaultValue="pnpm" className="pt-5 pb-1">
+  <TabsList>
+    <TabsTrigger value="pnpm">pnpm</TabsTrigger>
+    <TabsTrigger value="npm">npm</TabsTrigger>
+    <TabsTrigger value="yarn">yarn</TabsTrigger>
+  </TabsList>
+  <TabsContent value="pnpm">
+  ```bash 
+  pnpm dlx supabase gen types typescript --project-id <project-id> --schema public > types.ts
+  ```
+  </TabsContent>
+  <TabsContent value="npm">
+  ```bash 
+  npx supabase gen types typescript --project-id <project-id> --schema public > types.ts
+  ```
+  </TabsContent>
+  <TabsContent value="yarn">
+  ```bash 
+  yarn dlx supabase gen types typescript --project-id <project-id> --schema public > types.ts
+  ```
+  </TabsContent>
+</Tabs>

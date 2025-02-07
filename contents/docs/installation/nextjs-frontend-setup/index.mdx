@@ -1,0 +1,54 @@
+---
+title: Nextjs Frontend Setup
+---
+
+### Setup
+<Stepper>
+  <StepperItem title="Step 1: Navigate to the frontend directory">
+    ```bash
+    cd auth2
+    ```
+  </StepperItem>
+  <StepperItem title="Step 2: Install dependencies">
+    ```bash
+    pnpm i
+    ```
+  </StepperItem>
+  <StepperItem title="Step 3: Run the application">
+    ```bash
+    pnpm dev
+    ```
+  </StepperItem>
+  <StepperItem title="Step 4: Start Supabase">
+    <Note title="Note">
+      Ensure docker is running, then start supabase with:
+    </Note>
+    ```bash
+    pnpm supabase:web:start
+    ```
+  </StepperItem>
+  <StepperItem title="Step 5: Start Stripe(Optional)">
+    ```bash
+    pnpm stripe:listen
+    ```
+
+    <Note title="Note">
+      Copy the stripe webhook that is generated in the terminal and paste it in the .env file.
+    </Note>
+  </StepperItem>
+</Stepper>
+
+### Environment Variables
+
+<Stepper>
+  <StepperItem title="Step 1: Navigate to nextjs app directory">
+    ```bash
+    cd apps/web
+    ```
+  </StepperItem>
+  <StepperItem title="Step 2: Copy the environment variables">
+    ```bash
+    cp .env.example .env
+    ```
+  </StepperItem>
+</Stepper>

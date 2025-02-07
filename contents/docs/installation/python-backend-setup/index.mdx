@@ -1,0 +1,47 @@
+---
+title: Python Backend Setup
+---
+
+### Setup
+
+<Stepper>
+  <StepperItem title="Step 1: Navigate to python backend directory">
+    ```bash
+    cd python-backend
+    ```
+  </StepperItem>
+  <StepperItem title="Step 2: Create a virtual environment">
+    ```bash
+    python -m venv venv
+    ```
+  </StepperItem>
+  <StepperItem title="Step 3: Activate the virtual environment">
+    Linux/MacOS:
+    ```bash
+    source venv/bin/activate
+    ```
+    Windows:
+    ```bash
+    venv\Scripts\activate
+    ```
+  </StepperItem>
+  <StepperItem title="Step 4: Install dependencies">
+    ```bash
+    pip install -r requirements.txt
+    ```
+  </StepperItem>
+  <StepperItem title="Step 5: Copy the .env file then set the variables">
+    ```bash
+    cp .env.example .env
+    ```
+  </StepperItem>
+  <StepperItem title="Step 6: Run the application">
+    ```bash
+    uvicorn app.main:app --port 8000 --reload
+    ```
+    <Note title="Note">
+      When running the application, ensure that you are inside the venv. If not, run the command to activate the venv from **Step 3**.
+    </Note>
+  </StepperItem>
+</Stepper>
+

@@ -1,0 +1,50 @@
+---
+title: Add to Application List
+description: Add Cursor to Application List.
+---
+
+### Follow these steps to add Cursor to your applications list
+
+**Step 1** Move the app from the download to opt folder
+
+```bash
+sudo mv cursor-0.42.4x86_64.AppImage /opt/cursor.appimage
+```
+
+**Step 2** Create a desktop entry for Cursor by running the command
+
+```bash
+sudo nano /usr/share/applications/cursor.desktop
+```
+
+**Step 3** Paste the following in the file you've just created
+
+```
+[Desktop Entry]
+Name=Cursor
+Exec=/opt/cursor.appimage
+Icon=/opt/cursor.png
+Type=Application
+Categories=Development;
+```
+
+**Step 4** Save the file
+
+```bash
+ctl + x
+```
+
+```bash
+press y
+```
+
+```bash
+press enter
+```
+
+**As Final Step, we should add an icon to the app so you can tell it apart from other applications**
+
+Since we moved the app into the **/opt** directory, add a .png image into the **/opt** directory as well.
+The image file should be named **cursor.png** as defined when we created the desktop entry.
+
+If you did all the steps and you application icon is not showing Log Out then login again

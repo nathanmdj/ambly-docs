@@ -1,0 +1,40 @@
+---
+title: Linux Installation
+description: Cursor Installation guide for Linux.
+---
+
+**Step 1** Visit the Cursor website at https://cursor.so and click on the "Download" button.
+
+![cursor-download](/cursor-download.png)
+
+**Step 2** When the download is finished, a file with this extension .AppImage at the end will be in your download folder
+
+**Step 3** Do not click it immediately! For the file to function properly, we must first make it executable. To make the file executable, go to the Downloads folder (or the place where you downloaded the Cursor software) and execute this command.
+
+```bash
+chmod +x cursor-0.42.4x86_64.AppImage
+```
+
+Proceed to Step 4 if you run into a problem at this point, If you didn't encounter this error, you can skip the Step 4
+
+bash
+./cursor-0.42.4x86_64.AppImage
+dlopen(): error loading libfuse.so.2
+
+AppImages require FUSE to run.
+You might still be able to extract the contents of this AppImage
+if you run it with the --appimage-extract option.
+See https://github.com/AppImage/AppImageKit/wiki/FUSE
+for more information
+
+**Step 4** install libfuse2
+
+```bash
+sudo apt-get install libfuse2
+```
+
+**Step 5** once you install the libfuse2 now run again this command
+
+```bash
+chmod +x cursor-0.42.4x86_64.AppImage
+```

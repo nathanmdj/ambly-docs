@@ -1,0 +1,56 @@
+---
+title: Restarting the application
+---
+
+<Note title="Note">
+  Make sure that you have EB CLI installed. If not, follow this [guide](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install.html).
+</Note>
+
+
+
+<Stepper>
+  <StepperItem title="Step 1: Navigate to the python backend directory">
+    ```bash
+    cd python-backend/theta-terminal
+    ```
+  </StepperItem>
+  <StepperItem title="Step 2: Authenticate with AWS">
+    ```bash
+    aws configure
+    ```
+  Enter:
+  - **AWS Access Key ID**
+  - **AWS Secret Access Key**
+  - **Default Region Name** (e.g., `us-east-1`, `us-west-2`)
+  - **Output Format** (default: `json`)
+
+  </StepperItem>
+  <StepperItem title="Step 3: Verify Authentication">
+    ```bash
+    aws sts get-caller-identity
+    ```
+    <Note title="Note">
+      If this returns your AWS account details, authentication is successful.
+    </Note>
+  </StepperItem>
+  <StepperItem title="Step 4: List available environments then link to the correct environment">
+    ```bash
+    eb list
+    ```
+    ```bash
+    eb use <your-env>
+    ```
+  </StepperItem>
+  <StepperItem title="Step 5: Redeploy the application">
+    ```bash
+    eb deploy
+    ```
+  </StepperItem>
+</Stepper>
+
+
+
+
+
+
+
