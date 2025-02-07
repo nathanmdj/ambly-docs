@@ -52,7 +52,7 @@ export function Navbar() {
             <Search />
             <div className="flex ml-2.5 sm:ml-0">
               <Link
-                href="https://github.com/finflit/options-friend"
+                href="https://github.com/nathanmdj/ambly-docs"
                 target="_blank"
                 className={buttonVariants({ variant: "ghost", size: "icon" })}
               >
