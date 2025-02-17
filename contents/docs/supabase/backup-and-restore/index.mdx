@@ -1,0 +1,50 @@
+---
+title: Backup and restore supabase database
+---
+
+<Note title="Required">
+  Install `pg_dump` (if not already installed) using this:
+  - **For Ubuntu/Debian:**
+  ```bash
+  sudo apt-get install postgresql-client
+  ```
+  - **For MacOS:**
+  ```bash
+  brew install postgresql
+  ```
+  - **For Windows:**
+  Install PostgreSQL from [postgresql.org](https://www.postgresql.org/download/windows/) and ensure pg_dump is included in the installation.
+</Note>
+
+### Creating a backup
+<Stepper>
+  <StepperItem title="Step 1: Get your database connection string">
+   - Go to the **Supabase Dashboard** -> Select your project
+   - Click the connect button at the top
+   ![connect button](/connect-button.png)
+   - Copy the connection string from **Transaction pooler** section
+  </StepperItem>
+  <StepperItem title="Step 2: Create a backup">
+   - Run the following command to create a backup
+   ```bash
+   pg_dump "postgresql://<username>:<password>@aws-0-us-east-1.pooler.supabase.com:5432/postgres?sslmode=require" -F c -b -v --clean --if-exists -f <backup_file_name>.dump
+   ```
+  </StepperItem>
+</Stepper>
+
+### Restoring a backup
+<Stepper>
+  <StepperItem title="Step 1: Get your database connection string">
+   - Go to the **Supabase Dashboard** -> Select your project
+   - Click the connect button at the top
+   ![connect button](/connect-button.png)
+   - Copy the connection string from **Transaction pooler** section
+  </StepperItem>
+  <StepperItem title="Step 2: Restore a backup">
+   - Run the following command to restore a backup
+   ```bash
+   pg_restore -d "postgresql://<username>:<password>@aws-0-us-east-1.pooler.supabase.com:5432/postgres?sslmode=require" <backup_file_name>.dump
+
+   ```
+  </StepperItem>
+</Stepper>

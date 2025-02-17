@@ -28,6 +28,12 @@ export const ROUTES: EachRoute[] = [
     ],
   },
   {
+    title: "Supabase",
+    href: "/supabase",
+    noLink: true,
+    items: [{ title: "Backup and restore", href: "/backup-and-restore" }],
+  },
+  {
     title: "Common Commands",
     href: "/common-commands",
     noLink: true,
