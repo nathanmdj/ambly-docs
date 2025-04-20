@@ -1,7 +1,7 @@
 ---
 title: Restarting the application
 ---
-
+## via CLI
 <Note title="Note">
   Make sure that you have EB CLI installed. If not, follow this [guide](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install.html).
 </Note>
@@ -19,9 +19,9 @@ title: Restarting the application
     aws configure
     ```
   Enter:
-  - **AWS Access Key ID**
-  - **AWS Secret Access Key**
-  - **Default Region Name** (e.g., `us-east-1`, `us-west-2`)
+  - **AWS Access Key ID** : AK******OBFC
+  - **AWS Secret Access Key** : ******XEIIB
+  - **Default Region Name** us-west-1
   - **Output Format** (default: `json`)
 
   </StepperItem>
@@ -48,9 +48,21 @@ title: Restarting the application
   </StepperItem>
 </Stepper>
 
+## via Dashboard
 
-
-
-
-
-
+<Stepper>
+  <StepperItem title="Step 1: Login to AWS">
+    - account ID: ****573
+    - IAM user name: th****-*****lk
+    - password: **********u7C
+  </StepperItem>
+  <StepperItem title="Step 2: Navigate to Elastic Beanstalk">
+   ![navigate-to-elastic-beanstalk](/aws_eb01.png)
+  </StepperItem>
+  <StepperItem title="Step 3: Select the environment">
+    ![select-environment](/aws_eb02.png)
+  </StepperItem>
+  <StepperItem title="Step 4: Click actions dropdown, then Restart app server">
+    ![actions-dropdown](/aws_eb03.png)
+  </StepperItem>
+</Stepper>
